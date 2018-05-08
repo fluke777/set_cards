@@ -124,7 +124,7 @@ As input it takes a directory with images. the job_spec.json is a simple json li
 		["20180508-051345-7660", "count"]
 	]
 
-So in set_1 are images like this.
+So in set_1 are images like this (these are turned to BW and are cropped a bit. See the dropbox download for the raw images).
 
 ![Alt text](images/IMG_0864.png?raw=true "image_1")
 ![Alt text](images/IMG_0872.png?raw=true "image_2")
@@ -135,7 +135,14 @@ So in set_1 are images like this.
 
 After a bit of crunching (see below) it should spit out something like
 
-	Set was found ({'count': u'three', 'shape': u'oval'}, {'count': u'one', 'shape': u'diamond'}, {'count': u'two', 'shape': u's shape'})
+	Set was found (
+		{'count': u'two', 'shape': u'oval'},
+		{'count': u'three', 'shape': u's shape'},
+		{'count': u'one', 'shape': u'diamond'})
+		
+	Set was found (
+		{'count': u'three', 'shape': u'diamond'},
+		{'count': u'two', 'shape': u'diamond'},
+		{'count': u'one', 'shape': u'diamond'})
 
-I have to figure out a better way to do it. The network is Caffe network so I should be able to call it directly. What needs to be done is to reshape the images into format that is eaten by the network. It uses GoogLeNet under the hood and eats 256x256 greyscale pngs.
-
+Which is actually correct. Profit!
