@@ -126,12 +126,12 @@ As input it takes a directory with images. the job_spec.json is a simple json li
 
 So in set_1 are images like this.
 
-![Alt text](imagesi/IMG_0864.png?raw=true "image_1")
-![Alt text](imagesi/IMG_0872.png?raw=true "image_2")
-![Alt text](imagesi/IMG_0885.png?raw=true "image_3")
-![Alt text](imagesi/IMG_0892.png?raw=true "image_4")
-![Alt text](imagesi/IMG_0800.png?raw=true "image_5")
-![Alt text](imagesi/IMG_0911.png?raw=true "image_6")
+![Alt text](images/IMG_0864.png?raw=true "image_1")
+![Alt text](images/IMG_0872.png?raw=true "image_2")
+![Alt text](images/IMG_0885.png?raw=true "image_3")
+![Alt text](images/IMG_0892.png?raw=true "image_4")
+![Alt text](images/IMG_0800.png?raw=true "image_5")
+![Alt text](images/IMG_0911.png?raw=true "image_6")
 
 After a bit of crunching (see below) it should spit out something like
 
