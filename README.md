@@ -1,6 +1,6 @@
-# set_cards
+# Set card game solver using DNN
 
-This is a fun little project that I was hoping to put together for some time. My Girfriend likes to play Set (https://www.setgame.com/set) which I think is a fantastic card game. I like the game too the problem is I kinda suck at it :-) and if I lose I do not like it that much anymore. I was hoping to beat her using technology if I cannot do it using my brain.
+This is a fun little project that I was hoping to put together for some time. My girlfriend likes to play Set (https://www.setgame.com/set) which I think is a fantastic card game. I like the game too the problem is I kinda suck at it :-) and if I lose I do not like it that much anymore. I was hoping to beat her using technology if I cannot do it using my brain.
 
 I attempted an implementation in Mathematica some time ago using some classical vision techniques like image similarity etc. That did not pan out that well. The classifier had a lots of issues you would expect. Different lighting, orientation of the cards etc.
 
@@ -19,9 +19,10 @@ Currently this does not work that you take a picture of dealt cards and it just 
 
 ## Data
 
-I collected around 600 images and they are available for you to experiment. You can download from here
+I collected around 600 images and they are available for you to experiment. You can download from here. Be careful it is over 2GB compressed.
 
-	wget 
+	wget https://www.dropbox.com/sh/il779kupzshjnsu/AAAevUuMNnGQKhoY8giCMLfXa?dl=1
+
 
 The data directory looks like this
 
@@ -64,7 +65,7 @@ card_validation_udacity contains picture used for validation there is around 100
 
 ## Training
 
-You are more than welcome to use the data and train with them as you wish. I did the training using outstanding tool from Nvidia called Digits that simplifies the training process singificantly. There is 
+You are more than welcome to use the data and train with them as you wish. I did the training using outstanding tool from Nvidia called Digits that simplifies the training process singificantly. There are 2 models packaged in that both have ~95-99% accuracy on the validation set.
 
 
 ## Evaluation
@@ -146,3 +147,9 @@ After a bit of crunching (see below) it should spit out something like
 		{'count': u'one', 'shape': u'diamond'})
 
 Which is actually correct. Profit!
+
+## Deployment to the wild
+
+Currently the testing depends on dhe Digits which is not ideal since the detection is slowed down a lot by the api of the server and transitioning of the images. The network itself is able to respond in ms onto an input.
+
+I am planning to add description how to deploy this onto Jetson TK2 when I have time.
