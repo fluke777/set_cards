@@ -146,6 +146,11 @@ After a bit of crunching (see below) it should spit out something like
 		{'count': u'two', 'shape': u'diamond'},
 		{'count': u'one', 'shape': u'diamond'})
 
+	Set was found (
+		{'count': u'one', 'shape': u's shape'},
+		{'count': u'two', 'shape': u'oval'},
+		{'count': u'three', 'shape': u'diamond'})
+
 Which is actually correct. Profit!
 
 ## Deployment to the wild
